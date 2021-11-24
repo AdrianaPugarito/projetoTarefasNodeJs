@@ -7,7 +7,7 @@ const Tarefa = require('../models/tarefa')
 router.post('/', async (req, res) =>{
   if (req.body.Tarefa && req.body.Horario) {
       const tarefa = await Tarefa.create({
-          id: 4,
+          id: 7,
           Tarefa: req.body.Tarefa,
           Horario: req.body.Horario
       })
@@ -35,9 +35,9 @@ router.get('/', async (req, res) => {
 
 //Atualizando tarefa
 router.put('/:id', async (req, res) => {
-  if(req.params.id == '1' && req.body.Tarefa || req.body.Horario) {
+  if(req.params.id == '7' && req.body.Tarefa || req.body.Horario) {
     res.send({
-           id: 4,
+           id: 7,
         Tarefa: req.body.Tarefa || 'Corrigindo erros da API',
         Horario: req.body.Horario || 'quinta todo o dia'
       })
